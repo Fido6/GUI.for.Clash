@@ -1,10 +1,14 @@
 name: Build GUI.for.Clash
 
-on:
+on: 
+  release:
+    types: [published]
   push:
     tags:
-      - "v*"
-
+    - 'v*'
+  watch:
+    types: [started]
+    
 jobs:
   Build:
     permissions: write-all
